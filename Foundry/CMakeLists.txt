@@ -19,8 +19,6 @@ add_definitions(-DFOUNDRY_LIB)
 
 target_precompile_headers(Foundry PRIVATE pch.h)
 
-target_link_libraries(Foundry glfw)
-
 include_directories(../glfw/include)
 include_directories(../glad/include)
 include_directories(./)
