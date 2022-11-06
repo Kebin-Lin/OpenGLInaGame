@@ -23,4 +23,4 @@ add_subdirectory(Fall22)
 add_subdirectory(Foundry)
 add_subdirectory(glfw)
 
-set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Fall22)
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT FinalGame)
