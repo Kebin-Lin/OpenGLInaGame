@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.22)
 
 # Project name and version
 project(final_game)
@@ -23,5 +23,4 @@ add_subdirectory(Fall22)
 add_subdirectory(Foundry)
 add_subdirectory(glfw)
 
-# CMake 3.24
-set(VS_STARTUP_PROJECT Fall22)
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Fall22)

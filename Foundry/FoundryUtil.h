@@ -2,7 +2,7 @@
 
 #ifdef FOUNDRY_WINDOWS
 #define START_FOUNDRY_GAME(GameClass) \
-    int WinMain()                  \
+    int main()                     \
     {                              \
         GameClass game;            \
         game.run();                \

@@ -1,7 +1,3 @@
-if (WIN32)
-    add_executable(Fall22 WIN32 Fall22.cpp)
-else()
-    add_executable(Fall22 Fall22.cpp)
-endif()
+add_executable(Fall22 Fall22.cpp)
 include_directories(../Foundry)
 target_link_libraries(Fall22 Foundry)
