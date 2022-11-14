@@ -15,9 +15,9 @@ namespace Foundry {
         
         glfwMakeContextCurrent(this->mWindow);
 
-        // if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        //     FOUNDRY_LOG("Failed to initialize GLAD");
-        // }
+        if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+            FOUNDRY_LOG("Failed to initialize GLAD");
+        }
     }
 
     void GLFWImplementation::swapBuffers() {

@@ -22,5 +22,7 @@ add_definitions(-DFOUNDRY_DEBUG)
 add_subdirectory(Fall22)
 add_subdirectory(Foundry)
 add_subdirectory(glfw)
+add_subdirectory(glad)
+add_subdirectory(stbi)
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT FinalGame)

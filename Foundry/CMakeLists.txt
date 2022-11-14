@@ -21,6 +21,9 @@ target_precompile_headers(Foundry PRIVATE pch.h)
 
 include_directories(../glfw/include)
 include_directories(../glad/include)
-include_directories(./)
+include_directories(../stbi)
+include_directories(.)
 
 target_link_libraries(Foundry glfw)
+target_link_libraries(Foundry glad)
+target_link_libraries(Foundry stbi)
