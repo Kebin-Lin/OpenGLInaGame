@@ -2,3 +2,4 @@ build/
 CMakeFiles/
 .vs/
 .vscode/
+.DS_Store
