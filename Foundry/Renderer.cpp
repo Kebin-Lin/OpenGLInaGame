@@ -9,7 +9,7 @@ namespace Foundry {
         }
     }
 
-    static Renderer* Renderer::getRenderer() {
+    Renderer* Renderer::getRenderer() {
         return mInstance;
     }
 
@@ -23,5 +23,9 @@ namespace Foundry {
 
     void Renderer::draw(Picture& picture, int x, int y, int z, Shader& shader) {
         getRenderer()->mImplementation->draw(picture, x, y, z, shader);
+    }
+
+    void Renderer::draw(Picture& picture, int x, int y, int z) {
+        getRenderer()->mImplementation->draw(picture, x, y, z, getRenderer()->mDefaultShader);
     }
 }

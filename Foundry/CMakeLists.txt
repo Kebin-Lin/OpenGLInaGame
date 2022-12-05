@@ -4,10 +4,10 @@ set(SOURCE_FILES
     FoundryWindow.cpp
     GLFWCode/GLFWImplementation.cpp
     Picture.cpp
-    PictureImplementation.cpp
     OpenGLCode/OpenGLPicture.cpp
     Shader.cpp
     OpenGLCode/OpenGLShader.cpp
+    Renderer.cpp
     OpenGLCode/OpenGLRenderer.cpp
 )
 set(HEADER_FILES

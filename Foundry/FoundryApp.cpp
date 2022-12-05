@@ -18,7 +18,7 @@ namespace Foundry
 
         Picture pic{"assets/textures/amogus.png"};
 
-        Renderer::draw(pic, 100, 100, 1);
+        Renderer::init();
 
         // Texture setup
         unsigned int texture;
@@ -28,6 +28,7 @@ namespace Foundry
         while (true)
         {
             glClear(GL_COLOR_BUFFER_BIT);
+            Renderer::draw(pic, 100, 100, 1);
 
             FoundryWindow::getWindow()->swapBuffers();
 
