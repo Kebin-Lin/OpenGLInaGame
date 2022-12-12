@@ -28,4 +28,8 @@ namespace Foundry {
     void Renderer::draw(Picture& picture, int x, int y, int z) {
         getRenderer()->mImplementation->draw(picture, x, y, z, getRenderer()->mDefaultShader);
     }
+
+    void Renderer::clear() {
+        getRenderer()->mImplementation->clear();
+    }
 }

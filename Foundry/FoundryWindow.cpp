@@ -38,4 +38,11 @@ namespace Foundry {
     int FoundryWindow::getWidth() const {
         return mWidth;
     }
+
+    void FoundryWindow::setKeyPressedCallback(const std::function<void(const KeyPressedEvent&)>& keyPressedCallback) {
+        mImplementation->setKeyPressedCallback(keyPressedCallback);
+    }
+    void FoundryWindow::setKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback) {
+        mImplementation->setKeyReleasedCallback(keyReleasedCallback);
+    }
 }

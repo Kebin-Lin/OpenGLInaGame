@@ -26,6 +26,7 @@ set(HEADER_FILES
     Renderer.h
     RendererImplementation.h
     OpenGLCode/OpenGLRenderer.h
+    Event.h
 )
 
 add_library(Foundry SHARED ${SOURCE_FILES} ${HEADER_FILES})

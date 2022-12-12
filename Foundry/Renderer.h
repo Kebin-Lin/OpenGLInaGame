@@ -11,6 +11,7 @@ namespace Foundry {
             static void draw(Picture& picture, int x, int y, int z, Shader& shader);
             static void draw(Picture& picture, int x, int y, int z);
             static Renderer* getRenderer();
+            static void clear();
 
         private:
             inline static Renderer* mInstance{nullptr};

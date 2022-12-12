@@ -16,23 +16,31 @@ namespace Foundry
         FoundryWindow::init();
         FoundryWindow::getWindow()->create(600, 400, "TestWindow");
 
-        Picture pic{"assets/textures/amogus.png"};
-
         Renderer::init();
 
+        mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
+
+        // int x{ 200 }, y{ 200 };
+        // FoundryWindow::getWindow()->setKeyPressedCallback([&](const KeyPressedEvent& event)) {
+            
+        //     } else if (event.getKeyCode() == FOUNDRY_KEY_RIGHT) x += 10;
+        // });
+
+        Picture pic{"assets/textures/amogus.png"};
         // Texture setup
         unsigned int texture;
 
-        glClearColor(0.5f, 0.0f, 0.0f, 1.0f);
-
         while (true)
         {
-            glClear(GL_COLOR_BUFFER_BIT);
+            Renderer::clear();
+            onUpdate();
+
             Renderer::draw(pic, 100, 100, 1);
+            std::this_thread::sleep_until(mNextFrameTime);
 
             FoundryWindow::getWindow()->swapBuffers();
 
-            onUpdate();
+            mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
         }
     }
 }

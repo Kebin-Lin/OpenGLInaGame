@@ -8,5 +8,6 @@ namespace Foundry {
         public:
             OpenGLRenderer();
             virtual void draw(Picture& picture, int x, int y, int z, Shader& shader) override;
+            virtual void clear() override;
     };
 }

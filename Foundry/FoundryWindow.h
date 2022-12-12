@@ -3,6 +3,7 @@
 #include "pch.h"
 #include "FoundryUtil.h"
 #include "WindowImplementation.h"
+#include "Event.h"
 
 namespace Foundry {
     class FOUNDRY_API FoundryWindow {
@@ -18,5 +19,8 @@ namespace Foundry {
             void swapBuffers();
             int getWidth() const;
             int getHeight() const;
+
+            void setKeyPressedCallback(const std::function<void(const KeyPressedEvent&)>& keyPressedCallback);
+            void setKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback);
     };
 }
