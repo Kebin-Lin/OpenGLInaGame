@@ -14,6 +14,8 @@ namespace Foundry {
 
             virtual void activate() override;
 
+            ~OpenGLPicture();
+
         private:
             unsigned int mImage{0};
             int mWidth{0};

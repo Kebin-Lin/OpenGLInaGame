@@ -8,15 +8,17 @@
 
 namespace Foundry
 {
-    void FoundryApp::onUpdate() {}
-    void FoundryApp::run()
-    {
-        FOUNDRY_LOG("RUNNING");
-
+    FoundryApp::FoundryApp() {
         FoundryWindow::init();
         FoundryWindow::getWindow()->create(600, 400, "TestWindow");
 
         Renderer::init();
+    }
+
+    void FoundryApp::onUpdate() {}
+    void FoundryApp::run()
+    {
+        FOUNDRY_LOG("RUNNING");
 
         mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
 

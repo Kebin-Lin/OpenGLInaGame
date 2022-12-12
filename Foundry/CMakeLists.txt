@@ -10,6 +10,7 @@ set(SOURCE_FILES
     Renderer.cpp
     OpenGLCode/OpenGLRenderer.cpp
     Event.cpp
+    Unit.cpp
 )
 set(HEADER_FILES
     Foundry.h
@@ -28,13 +29,12 @@ set(HEADER_FILES
     RendererImplementation.h
     OpenGLCode/OpenGLRenderer.h
     Event.h
+    Unit.h
 )
 
 add_library(Foundry SHARED ${SOURCE_FILES} ${HEADER_FILES})
 
 add_definitions(-DFOUNDRY_LIB)
-
-add_definitions(-DFOUNDRY_OPENGL)
 
 target_precompile_headers(Foundry PRIVATE pch.h)
 
@@ -43,6 +43,4 @@ include_directories(../glad/include)
 include_directories(../stbi)
 include_directories(.)
 
-target_link_libraries(Foundry glfw)
-target_link_libraries(Foundry glad)
-target_link_libraries(Foundry stbi)
+target_link_libraries(Foundry glfw glad stbi)

@@ -65,4 +65,8 @@ namespace Foundry {
     void OpenGLPicture::activate() {
         glBindTexture(GL_TEXTURE_2D, this->mImage);
     }
+
+    OpenGLPicture::~OpenGLPicture() {
+        glDeleteTextures(1, &mImage);
+    }
 }

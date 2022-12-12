@@ -51,6 +51,10 @@ namespace Foundry {
         shader.provideFloatValues("screenSize", {(float) width, (float) height});
 
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+        glDeleteVertexArrays(1, &VAO);
+        glDeleteBuffers(1, &VBO);
+        glDeleteBuffers(1, &EBO);
     }
 
     void OpenGLRenderer::clear() {

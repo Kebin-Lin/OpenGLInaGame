@@ -194,4 +194,8 @@ namespace Foundry {
                 FOUNDRY_LOG("ERROR: Shader values must be vectors of size 1 to 4");
         }
     }
+
+    OpenGLShader::~OpenGLShader() {
+        glDeleteProgram(mShaderProg);
+    }
 }

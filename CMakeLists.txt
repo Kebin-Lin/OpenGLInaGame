@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.22) # Maybe change to 3.24
 
 # Project name and version
 project(final_game)
@@ -18,6 +18,7 @@ else()
 endif()
 
 add_definitions(-DFOUNDRY_DEBUG)
+add_definitions(-DFOUNDRY_OPENGL)
 
 add_subdirectory(Fall22)
 add_subdirectory(Foundry)
@@ -26,3 +27,7 @@ add_subdirectory(glad)
 add_subdirectory(stbi)
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT FinalGame)
+
+file(COPY Fall22/Assets DESTINATION ${PROJECT_BINARY_DIR}/Fall22)
+file(COPY Fall22/Assets DESTINATION ${PROJECT_BINARY_DIR}/Debug)
+file(COPY Fall22/Assets DESTINATION ${PROJECT_BINARY_DIR}/Release)

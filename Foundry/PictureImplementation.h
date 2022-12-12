@@ -9,5 +9,7 @@ namespace Foundry {
             virtual int getWidth() const = 0;
 
             virtual void activate() = 0;
+
+            virtual ~PictureImplementation() {};
     };
 }

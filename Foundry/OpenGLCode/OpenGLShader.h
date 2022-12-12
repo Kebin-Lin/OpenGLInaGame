@@ -13,6 +13,8 @@ namespace Foundry {
             virtual void provideFloatValues(const std::string& valueName, const std::vector<float>& values) override;
             virtual void provideFloatValues(std::string&& valueName, std::vector<float>&& values) override;
 
+            ~OpenGLShader();
+
         private:
             unsigned int mShaderProg{0};
     };

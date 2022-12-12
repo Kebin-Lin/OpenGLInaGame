@@ -8,10 +8,12 @@ constexpr int FRAMES_PER_SECOND = 60;
 namespace Foundry {
     class FOUNDRY_API FoundryApp {
         public:
+            FoundryApp();
             virtual void onUpdate();
             void run();
         
         private:
+            // Change seconds to 1000 if causing issues
             std::chrono::milliseconds mFrameDuration{ std::chrono::seconds{1} / FRAMES_PER_SECOND };
             std::chrono::steady_clock::time_point mNextFrameTime;
     };
