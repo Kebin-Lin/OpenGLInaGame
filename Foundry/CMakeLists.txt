@@ -9,6 +9,7 @@ set(SOURCE_FILES
     OpenGLCode/OpenGLShader.cpp
     Renderer.cpp
     OpenGLCode/OpenGLRenderer.cpp
+    Event.cpp
 )
 set(HEADER_FILES
     Foundry.h

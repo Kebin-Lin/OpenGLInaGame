@@ -1,5 +1,6 @@
 #pragma once
 
+#include "pch.h"
 #include "FoundryUtil.h"
 
 constexpr int FRAMES_PER_SECOND = 60;

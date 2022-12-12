@@ -1,6 +1,7 @@
 #pragma once
 
 #include "pch.h"
+#include "Event.h"
 
 namespace Foundry {
     class WindowImplementation {
