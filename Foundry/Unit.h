@@ -9,7 +9,7 @@ namespace Foundry {
             Unit(const std::string& picFile, int hp);
             Unit(std::string&& picFile, int hp);
 
-            int setCoord(int x, int y, int z);
+            void setCoord(int x, int y, int z);
             int changeX(int xDiff);
             int changeY(int yDiff);
             int changeZ(int zDiff);
