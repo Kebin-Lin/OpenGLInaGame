@@ -29,6 +29,14 @@ namespace Foundry {
         getRenderer()->mImplementation->draw(picture, x, y, z, getRenderer()->mDefaultShader);
     }
 
+    void Renderer::draw(Unit& unit, Shader& shader) {
+        getRenderer()->mImplementation->draw(unit.mPicture, unit.getX(), unit.getY(), unit.getZ(), shader);
+    }
+
+    void Renderer::draw(Unit& unit) {
+        getRenderer()->mImplementation->draw(unit.mPicture, unit.getX(), unit.getY(), unit.getZ(), getRenderer()->mDefaultShader);
+    }
+
     void Renderer::clear() {
         getRenderer()->mImplementation->clear();
     }

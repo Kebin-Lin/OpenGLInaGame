@@ -4,7 +4,7 @@
 #include "Picture.h"
 
 namespace Foundry {
-    class Unit {
+    class FOUNDRY_API Unit {
         public:
             Unit(const std::string& picFile, int hp);
             Unit(std::string&& picFile, int hp);

@@ -19,25 +19,13 @@ namespace Foundry
     void FoundryApp::run()
     {
         FOUNDRY_LOG("RUNNING");
-
         mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
-
-        // int x{ 200 }, y{ 200 };
-        // FoundryWindow::getWindow()->setKeyPressedCallback([&](const KeyPressedEvent& event)) {
-            
-        //     } else if (event.getKeyCode() == FOUNDRY_KEY_RIGHT) x += 10;
-        // });
-
-        Picture pic{"assets/textures/amogus.png"};
-        // Texture setup
-        unsigned int texture;
 
         while (true)
         {
             Renderer::clear();
             onUpdate();
 
-            Renderer::draw(pic, 100, 100, 1);
             std::this_thread::sleep_until(mNextFrameTime);
 
             FoundryWindow::getWindow()->swapBuffers();
