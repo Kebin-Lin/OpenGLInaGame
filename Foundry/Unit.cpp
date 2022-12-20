@@ -14,14 +14,14 @@ namespace Foundry {
 
         bool collideX{ false };
         if ((oneLeft <= otherLeft && otherLeft <= oneRight) ||
-            (otherLeft <= oneLeft && oneLeft << otherRight)) {
+            (otherLeft <= oneLeft && oneLeft <= otherRight)) {
                 collideX = true;
         }
 
         bool collideY{ false };
         if ((oneBottom <= otherBottom && otherBottom <= oneTop) ||
-            (otherBottom <= oneBottom && oneBottom << otherTop)) {
-                collideX = true;
+            (otherBottom <= oneBottom && oneBottom <= otherTop)) {
+                collideY = true;
         }
 
         return collideX && collideY;

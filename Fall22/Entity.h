@@ -16,6 +16,7 @@ class Entity {
     
     public:
         Entity(const std::vector<std::string>& frames);
+        Entity(Anim anim);
         void draw(int frameNum);
 
         int getX() const;
