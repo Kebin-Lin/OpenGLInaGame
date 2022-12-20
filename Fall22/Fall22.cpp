@@ -1,39 +1,61 @@
 #include "Foundry.h"
+#include "Entity.h"
+
+constexpr int PADDING = 48;
+constexpr int BOT_LANE = PADDING;
+constexpr int MID_LANE = BOT_LANE + 300;
+constexpr int TOP_LANE = MID_LANE + 300;
 
 class Fall22Game : public Foundry::FoundryApp {
     private:
-        Foundry::Unit amogus{"assets/textures/amogus.png", 1};
+
+        unsigned int frameNum = 0;
+        Entity player{
+            {
+                "assets/textures/holoCureInaRun/0.png", "assets/textures/holoCureInaRun/1.png", "assets/textures/holoCureInaRun/2.png",
+                "assets/textures/holoCureInaRun/3.png", "assets/textures/holoCureInaRun/4.png", "assets/textures/holoCureInaRun/5.png"
+            }
+        };
 
         void onKeyPress(const Foundry::KeyPressedEvent& event) {
             switch (event.getKeyCode()) {
                 case FOUNDRY_KEY_UP:
-                    amogus.changeY(10);
+                    player.setCoords(PADDING, TOP_LANE, 0);
                     break;
                 case FOUNDRY_KEY_DOWN:
-                    amogus.changeY(-10);
+                    player.setCoords(PADDING, BOT_LANE, 0);
                     break;
                 case FOUNDRY_KEY_RIGHT:
-                    amogus.changeX(10);
+                    player.setCoords(PADDING, MID_LANE, 0);
                     break;
-                case FOUNDRY_KEY_LEFT:
-                    amogus.changeX(-10);
-                    break;
+                // case FOUNDRY_KEY_LEFT:
+                //     break;
             }
         }
 
         void onKeyRelease(const Foundry::KeyReleasedEvent& event) {
-
+            // switch (event.getKeyCode()) {
+            //     case FOUNDRY_KEY_UP:
+            //         break;
+            //     case FOUNDRY_KEY_DOWN:
+            //         break;
+            //     case FOUNDRY_KEY_RIGHT:
+            //         break;
+            //     case FOUNDRY_KEY_LEFT:
+            //         break;
+            // }
         }
         
     public:
         Fall22Game() {
             Foundry::FoundryWindow::getWindow()->setKeyPressedCallback([this](const Foundry::KeyPressedEvent& event) {onKeyPress(event);});
             Foundry::FoundryWindow::getWindow()->setKeyReleasedCallback([this](const Foundry::KeyReleasedEvent& event) {onKeyRelease(event);});
-            amogus.setCoord(0,0,0);
+            player.setCoords(PADDING, BOT_LANE, 0);
         }
 
         void onUpdate() override {
-            Foundry::Renderer::draw(amogus);
+            player.draw(frameNum / 2);
+            frameNum++;
         };
 };
 

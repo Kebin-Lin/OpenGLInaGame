@@ -10,7 +10,7 @@ namespace Foundry
 {
     FoundryApp::FoundryApp() {
         FoundryWindow::init();
-        FoundryWindow::getWindow()->create(600, 400, "TestWindow");
+        FoundryWindow::getWindow()->create(1600, 900, "Foundry Game");
 
         Renderer::init();
     }
