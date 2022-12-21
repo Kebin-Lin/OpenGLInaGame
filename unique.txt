@@ -1,0 +1,13 @@
+Rules/Controls:
+Press UP or DOWN to move lanes.
+Don't touch the takodachis running at you.
+Takodachis speed up and become more frequent as the game goes on.
+
+Unique Features:
+- Enemies
+- Varying velocities
+- Difficulty increase as time goes on
+- Animation
+- Text rendering
+- Game states (GAME_OVER or RUNNING)
+- Option to replay on game over to reset score and difficulty
