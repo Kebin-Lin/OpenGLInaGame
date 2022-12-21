@@ -11,6 +11,8 @@ namespace Foundry {
             static void init();
             static void draw(Picture& picture, int x, int y, int z, Shader& shader);
             static void draw(Picture& picture, int x, int y, int z);
+            static void draw(Picture&& picture, int x, int y, int z, Shader& shader);
+            static void draw(Picture&& picture, int x, int y, int z);
             static void draw(Unit& unit, Shader& shader);
             static void draw(Unit& unit);
             static Renderer* getRenderer();
